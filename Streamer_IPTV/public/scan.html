@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scan.css">
+    <title>Scan des chaînes</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lancer le scan des chaines</h1>
+        <label for="cityInput">Ville :</label>
+        <input type="text" id="city" placeholder="Entrez la ville">
+        <button type="button" id="scanButton">Lancer le scan</button>
+
+        <div id="progressBar">
+            <div id="progress"></div>
+            <div id="progressText">0%</div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <!-- Le contenu sera dynamiquement inséré ici -->
+        </div>
+      </div>
+    <script>
+        // Fonction pour vérifier si l'utilisateur est connecté
+        function isLoggedIn() {
+            var isLoggedIn = localStorage.getItem('isLoggedIn');
+            return isLoggedIn === 'true';
+        }
+    
+        // Fonction pour rediriger vers la page de connexion
+        function redirectToLoginPage() {
+            window.location.href = 'login.html';
+        }
+    
+        // Fonction pour vérifier si l'utilisateur est connecté avant le chargement de la page
+        function checkLoggedInBeforePageLoad() {
+            if (!isLoggedIn() && window.location.pathname !== '/login.html') {
+                // Si l'utilisateur n'est pas connecté et n'est pas déjà sur la page de connexion, redirigez-le vers la page de connexion
+                redirectToLoginPage();
+            }
+        }
+    
+        // Appeler la fonction de vérification au chargement de la page
+        window.onload = checkLoggedInBeforePageLoad;
+    </script>
+
+<script src="scan.js"></script>
+   
+</body>
+</html>

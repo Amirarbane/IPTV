@@ -1,0 +1,22 @@
+{
+            "chaine 1": {
+            "chaine": "France 2",
+            "Multicast": "225.0.0.30:2000"
+    },
+"chaine 2": {
+            "chaine": "France 4",
+            "Multicast": "225.0.0.31:2000"
+    },
+"chaine 3": {
+            "chaine": "franceinfo ",
+            "Multicast": "225.0.0.32:2000"
+    },
+"chaine 4": {
+            "chaine": "F3 Paris Ile-de-France",
+            "Multicast": "225.0.0.33:2000"
+    },
+"chaine 5": {
+            "chaine": "BFM PARIS ILE-DE-FRANCE",
+            "Multicast": "225.0.0.34:2000"
+    }
+        }

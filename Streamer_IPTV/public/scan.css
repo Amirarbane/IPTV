@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#scanButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#scanButton:hover {
+    background-color: #2980b9;
+}
+
+#progressBar {
+    width: 350px; /* Largeur augmentée */
+    height: 25px; /* Hauteur augmentée */
+    background-color: #f5f5f5;
+    border-radius: 15px; /* Coins arrondis */
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Masqué par défaut */
+}
+
+#progressBar.visible {
+    display: block; /* Affiché lorsque la classe 'visible' est ajoutée */
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 12px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: none; /* Supprimer la bordure existante */
+    width: 200px; /* Ajuster la largeur du modal */
+    height: 200px; /* Ajuster la hauteur du modal pour le rendre carré */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+    border-radius: 10px; /* Ajouter des bordures arrondies */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  .close {
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  .ok-button {
+    display: block;
+    width: 80px; /* Largeur du bouton */
+    margin: 20px auto 0; /* Marge supérieure ajustée */
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+} 

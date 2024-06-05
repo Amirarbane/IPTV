@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="acceuil.css">
+  <title>Ma Page d'Accueil</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Projet IPTV</div>
+      <ul class="nav-links">
+        <li><a href="config.html" onclick="checkLoggedInBeforeRedirect()">Configuration</a></li>
+        <li><a href="scan.html" onclick="checkLoggedInBeforeRedirect()">Scan</a></li>
+        <li><a href="#" onclick="logout()">Déconnexion</a></li>
+
+        
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>IPTV</h1>
+      <p>Amir</p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+  <script>
+    // Fonction pour vérifier si l'utilisateur est connecté
+    function isLoggedIn() {
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+        return isLoggedIn === 'true';
+    }
+
+    // Fonction pour rediriger vers la page de connexion
+    function redirectToLoginPage() {
+        window.location.href = 'login.html';
+    }
+
+    // Fonction pour vérifier si l'utilisateur est connecté avant le chargement de la page
+    function checkLoggedInBeforePageLoad() {
+        if (!isLoggedIn() && window.location.pathname !== '/login.html') {
+            // Si l'utilisateur n'est pas connecté et n'est pas déjà sur la page de connexion, redirigez-le vers la page de connexion
+            redirectToLoginPage();
+        }
+    }
+
+    // Appeler la fonction de vérification au chargement de la page
+    window.onload = checkLoggedInBeforePageLoad;
+    </script>
+
+<script>
+  function logout() {
+      // Supprimer l'indicateur isLoggedIn du stockage local
+      localStorage.removeItem('isLoggedIn');
+      // Rediriger vers la page de connexion
+      window.location.href = 'login.html';
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#buttonGroup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: 5px; /* Ajoute une marge entre les boutons */
+    background-color: #ccc; /* Gris par défaut */
+    color: #000;
+    padding: 6px 12px; /* Ajustez la taille du padding selon vos préférences */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #aaa; /* Assombrir légèrement au survol */
+}
+
+#themeToggleImage {
+    cursor: pointer;
+    max-width: 40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+#themeToggleImage:hover {
+    opacity: 0.8;
+}
+
+#buttonGroup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme-input {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Couleur de fond plus claire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    font-size: 28px; /* Taille de la police augmentée */
+    margin-bottom: 15px;
+}
+#channelList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Pour aligner les éléments au centre horizontalement */
+    height: 100vh; /* Pour centrer verticalement */
+      
+}
+
+label[for="fec"], #fec {
+    display: none;
+}
+
+/* Bouton cacher */
+#startButton,
+#stopButton,
+#configForm button[type="button"]:nth-of-type(2) {
+    display: none;
+}
+
+.channel-item {
+    background-color: white; /* Fond blanc pour chaque élément de chaîne */
+    padding: 30px; /* Espacement intérieur pour donner de l'espace autour du contenu */
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère autour de la boîte */
+    display: inline-block; /* Pour aligner les éléments horizontalement */
+    margin-right: 35%; /* Décalage vers la gauche */
+}
+
+.channel-item p {
+    margin: 5;
+}
+
+.channel-item:hover {
+    background-color: #f5f5f5;  
+}
+
+
+
+/* Button styling */
+#startShow {
+    background-color: #3498db; /* Bleu foncé */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#startShow:hover {
+    background-color: #2980b9; /* Changement de couleur de fond au survol */
+}
+
+
+
+/* Modal CSS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: none; /* Supprimer la bordure existante */
+    width: 225px; /* Ajuster la largeur du modal */
+    height: 225px; /* Ajuster la hauteur du modal pour le rendre carré */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+    border-radius: 10px; /* Ajouter des bordures arrondies */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ------------ VARIABLES ------------ */
+:root{
+    /* COLORS */
+    --color: #9176FF;
+    --dark-color: #2b2b2b;
+    --dark-icon-color: #fff;
+    --light-color: #f7f7f7;
+    --light-icon-color: #FFDE59;
+}
+
+/* ------------ BASE ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start; /* Alignement en haut de la page */
+    min-height: 100vh; /* Hauteur minimale de la vue */
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+/* -------------- BUTTON -------------- */
+.btn{
+    background-color: #fff;
+    width: 4em; /* Ajustement de la largeur */
+    height: 2em; /* Ajustement de la hauteur */
+    border-radius: 2em; /* Ajustement du rayon de la bordure */
+    padding: 0.3em 0.5em; /* Ajustement de la marge intérieure */
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+}
+
+.btn__indicator{
+    background-color: #fff;
+    width: 1.5em; /* Ajustement de la largeur */
+    height: 1.5em; /* Ajustement de la hauteur */
+    border-radius: 50%;
+
+    position: absolute;
+
+    box-shadow: 0 2px 5px rgba(0,0,0, .2);
+
+    transition: transform .3s ease;
+}
+
+.btn__icon-container{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__icon{
+    color: var(--light-icon-color);
+    font-size: 1rem; /* Ajustement de la taille de la police */
+}
+
+/* -------------- ANIMATION ------------ */
+.btn__icon.animated{
+    animation: spin 0.5s;
+}
+
+@keyframes spin{
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* -------------- DARKMODE -------------- */
+body.darkmode{
+    background-color: var(--dark-color);
+}
+
+.darkmode .btn{
+    box-shadow: 0 2px 5px rgba(0,0,0, .2); /* Ajustement de l'ombre */
+}
+
+.darkmode .btn__indicator{
+    transform: translateX(1.5em);
+    background-color: var(--dark-color);
+    box-shadow: 0 2px 5px rgba(0,0,0, .2);
+}
+
+.darkmode .btn__icon{
+    color: var(--dark-icon-color);
+}
